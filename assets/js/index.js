@@ -17,9 +17,9 @@ function DownloadCanvasAsImage(){
     downloadLink.setAttribute('download', imageName);
     let canvas = document.getElementById('myCanvas');
     canvas.toBlob(function(blob) {
-    let url = URL.createObjectURL(blob);
-    downloadLink.setAttribute('href', url);
-    //downloadLink.click();
+        let url = URL.createObjectURL(blob);
+        downloadLink.setAttribute('href', url);
+        downloadLink.click();
     });
 }
 
@@ -41,8 +41,8 @@ downloadCardButton.addEventListener('click', function(e){
     context.fillStyle = '#000000';
 
     // center and make text
-    textWidth = (imageWidth - imageWidth / 1.90)
-    textHeight = (imageHeight - 380)
+    textWidth = (imageWidth - imageWidth / 1.96)
+    textHeight = (imageHeight - 950)
     
     context.fillText(text, textWidth, textHeight);
 
